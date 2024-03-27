@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+          background-color: black;
+          color: white;
+        }
+        .navbar {
+            background-color: black !important; /* Use !important to override Bootstrap styles */
+          }
+      
+          .navbar-brand,
+          .navbar-nav .nav-link {
+            color: white !important; /* Use !important to override Bootstrap styles */
+            font-size: 25px;
+        }
+        .education-text{
+            text-align:center;
+            margin-top:10px;
+        }
+        .skills-container{
+            text-align:center;
+            margin-top:20px;
+        }
+        .skills-container img{
+            margin:20px:
+        }
+        .skills-container p{
+            margin:0;
+            font size:14 px;
+        }
+        
+    </style>
+</head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#">ISHA SUDARSHINI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{url_for('AboutMe')}}">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('education')}}">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('skills')}}">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('projects')}}">Projects</a>
+            </li>
+              
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('contact')}}">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container education-text">
+        <h1>Skills</h1>
+    </div>
+    <div class="container skills-container">
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="{{url_for('static', filename='c.png')}}" class="img-fluid" alt="C/C++" width="170px">
+                <p>C/C++</p>
+            </div>
+            <div class="col-sm-4">
+                <img src="{{url_for('static', filename='python.png')}}" class="img-fluid" alt="Python" width="170px">
+                <p>Python</p>
+            </div>
+            <div class="col-sm-4">
+                <img src="{{url_for('static', filename='java.png')}}" class="img-fluid" alt="Java" width="180px">
+                <p>Java</p>
+            </div>
+        </div>
+    </div>
+    <div class="container skills-container">
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="{{url_for('static', filename='html.jpg')}}" class="img-fluid" alt="HTML/CSS" width="170px" height="200px">
+                <p>HTML/CSS</p>
+            </div>
+            <div class="col-sm-4">
+                <img src="{{url_for('static', filename='js.jpg')}}" class="img-fluid" alt="Javascript" width="170px" height="200px">
+                <p>Javascript</p>
+            </div>
+            <div class="col-sm-4">
+                <img src="{{url_for('static', filename='solidity.png')}}" class="img-fluid" alt="Solidity" width="130px">
+                <p>Solidity</p>
+            </div>
+        </div>
+    </div>
+    <div class="container skills-container">
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="{{url_for('static', filename='flask.png')}}" class="img-fluid" alt="Flask" width="170px" height="170px">
+                <p>Flask</p>
+            </div>
+            <div class="col-sm-4">
+                <img src="{{url_for('static', filename='dj.png')}}" class="img-fluid" alt="Django" width="150px">
+                <p>Django</p>
+            </div>
+            <div class="col-sm-4">
+                <img src="{{url_for('static', filename='sqlite.png')}}" class="img-fluid" alt="SqLite" width="200px" height="200px">
+                <p>SqLite</p>
+            </div>
+        </div>
+    </div>
+    <div class="container skills-container">
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="{{url_for('static', filename='mysql.png')}}" class="img-fluid" alt="MySQL" width="170px" height="170px">
+                <p>MySQL</p>
+            </div>
+            <div class="col-sm-4">
+                <img src="{{url_for('static', filename='bootstrap.png')}}" class="img-fluid" alt="Bootstrap" width="150px">
+                <p>Bootstrap</p>
+            </div>
+            <div class="col-sm-4">
+                <img src="{{url_for('static', filename='ms.jpeg')}}" class="img-fluid" alt="MS" width="170px" height="170px">
+                <p>Microsoft Office</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
